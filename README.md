@@ -2,7 +2,7 @@
 > A fully serverless AWS automation project that generates and emails daily cloud infrastructure reports using AWS Lambda, Boto3, EventBridge, Amazon SES, and CloudWatch.
 
 ![AWS](https://img.shields.io/badge/AWS-Lambda%20%7C%20IAM%20%7C%20SES%20%7C%20EventBridge-orange)
-![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Python](https://img.shields.io/badge/Python-3.14-blue)
 ![Boto3](https://img.shields.io/badge/Boto3-AWS%20SDK-yellow)
 
 ---
