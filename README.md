@@ -1,7 +1,4 @@
 # aws-resource-reporter
-Serverless AWS automation that generates and emails daily cloud resource reports using Lambda, Boto3, EventBridge, and Amazon SES.
-# ☁️ Automated AWS Resource Reporter
-
 > A fully serverless AWS automation project that generates and emails daily cloud infrastructure reports using AWS Lambda, Boto3, EventBridge, Amazon SES, and CloudWatch.
 
 ![AWS](https://img.shields.io/badge/AWS-Lambda%20%7C%20SES%20%7C%20EventBridge-orange)
