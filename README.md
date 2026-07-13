@@ -3,6 +3,7 @@
 
 ![AWS](https://img.shields.io/badge/AWS-Lambda%20%7C%20IAM%20%7C%20SES%20%7C%20EventBridge-orange)
 ![Python](https://img.shields.io/badge/Python-3.14-blue)
+![Boto3](https://img.shields.io/badge/Boto3-AWS%20SDK-yellow)
 
 ---
 
