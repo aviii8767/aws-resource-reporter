@@ -126,25 +126,27 @@ aws-resource-reporter/
 
 ## 📸 Screenshots
 
-## 📸 Architecture
-![Architecture](screenshots/architecture.png)
-
-## 📸 IAM Role
+## IAM Role
 ![Architecture](screenshots/iam-role.png)
 
-## 📸 Lambda Function
+
+## Lambda Function
 ![Architecture](screenshots/lambda-function.png)
 
-## 📸 EventBridge Scheduler
+
+## EventBridge Scheduler
 ![Architecture](screenshots/eventbridge-rule.png)
 
-## 📸 SES Verified Identity
+
+## SES Verified Identity
 ![Architecture](screenshots/ses.png)
 
-## 📸 CloudWatch Logs
+
+## CloudWatch Logs
 ![Architecture](screenshots/cloudwatch-log-events.png)
 
-## 📸 Email Report
+
+## Email Report
 ![Architecture](screenshots/email-report.png)
 
 ---
