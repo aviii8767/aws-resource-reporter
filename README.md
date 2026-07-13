@@ -4,8 +4,6 @@
 ![AWS](https://img.shields.io/badge/AWS-Lambda%20%7C%20SES%20%7C%20EventBridge-orange)
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![Boto3](https://img.shields.io/badge/Boto3-AWS%20SDK-yellow)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 ---
 
@@ -32,29 +30,24 @@ Using an event-driven, serverless architecture, the solution eliminates the need
 ## 🏗️ Architecture
 
 ```
-               Amazon EventBridge
-                       │
-                       ▼
-                 AWS Lambda
-                       │
-               Python + Boto3
-          ┌────────┼─────────┐
-          ▼        ▼         ▼
-        EC2       S3        IAM
-          │
-          ▼
-      Report Generator
-          │
-          ▼
-       Amazon SES
-          │
-          ▼
-      Email Notification
+                    Amazon EventBridge
+                           │
+                           ▼
+                 AWS Lambda(Python + Boto3)
+                     /              \
+                    ▼                ▼
+            AWS Services        CloudWatch Logs
+            (EC2, S3, IAM)
+                 │
+                 ▼
+          Report Generator
+                 │
+                 ▼
+             Amazon SES
+                 │
+                 ▼
+        Email Notification
 
-      CloudWatch Logs
-          ▲
-          │
-      Lambda Execution
 ```
 
 ---
@@ -105,32 +98,11 @@ No write, update, or delete permissions are granted for AWS resources.
 
 ---
 
-## 📧 Sample Report
-
-```
-AWS Daily Cloud Report
-
-EC2 INSTANCES
-------------------------------------
-i-0123456789 | Running | t2.micro
-
-S3 BUCKETS
-------------------------------------
-my-project-bucket
-
-IAM USERS
-------------------------------------
-admin-user      MFA Enabled
-developer-user  MFA Disabled
-```
-
----
-
 ## 🚀 Deployment
 
 1. Create an IAM execution role.
 2. Attach the required read-only policies.
-3. Add a custom SES send-email policy.
+3. Add a custom SES send-email policy(inline policy).
 4. Verify the email identity in Amazon SES.
 5. Deploy the Lambda function.
 6. Configure an EventBridge scheduled trigger.
@@ -141,7 +113,7 @@ developer-user  MFA Disabled
 ## 📂 Project Structure
 
 ```
-automated-aws-resource-reporter/
+aws-resource-reporter/
 │
 ├── lambda_function.py
 ├── requirements.txt
@@ -154,14 +126,26 @@ automated-aws-resource-reporter/
 
 ## 📸 Screenshots
 
-Add screenshots of:
+## 📸 Architecture
+![Architecture](screenshots/architecture.png)
 
-- Lambda Function
-- EventBridge Scheduler
-- IAM Role
-- SES Verified Identity
-- CloudWatch Logs
-- Email Output
+## 📸 IAM Role
+![Architecture](screenshots/iam-role.png)
+
+## 📸 Lambda Function
+![Architecture](screenshots/lambda-function.png)
+
+## 📸 EventBridge Scheduler
+![Architecture](screenshots/eventbridge-rule.png)
+
+## 📸 SES Verified Identity
+![Architecture](screenshots/ses.png)
+
+## 📸 CloudWatch Logs
+![Architecture](screenshots/cloudwatch-log-events.png)
+
+## 📸 Email Report
+![Architecture](screenshots/email-report.png)
 
 ---
 
